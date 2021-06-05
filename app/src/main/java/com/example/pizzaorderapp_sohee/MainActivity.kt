@@ -2,6 +2,7 @@ package com.example.pizzaorderapp_sohee
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActicity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +18,19 @@ class MainActivity : BaseActicity() {
 
     override fun setValues() {
 //        화면에 데이터르 ㄹ표시하기 위한 코드 모음
+
+//        뷰 페이저 작업
+
+
+
+//        탭레이아웃과 연결
+
+
+
+
+//        mainTabLayout.setupWithViewPager()
+
+
     }
 
 
