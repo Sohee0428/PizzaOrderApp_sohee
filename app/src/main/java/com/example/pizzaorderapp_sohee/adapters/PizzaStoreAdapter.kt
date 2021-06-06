@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.example.pizzaorderapp_sohee.R
 import com.example.pizzaorderapp_sohee.datas.Store
@@ -18,11 +19,8 @@ class PizzaStoreAdapter(val mContext: Context, val resId: Int, val mList: List<S
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
 
         var tempRow = convertView
-        if(tempRow == null) {
-            tempRow = inflater.inflate(R.layout.pizza_store_list_item, null)
-        }
 
-        val row = tempRow!!
+        val row = tempRow?: inflater.inflate(resId, null)
 
         val data = mList[position]
 
@@ -31,8 +29,9 @@ class PizzaStoreAdapter(val mContext: Context, val resId: Int, val mList: List<S
 
         storeNameTxt.text = data.name
 
-        Glide.with(mContext).load(data.logoURL).into(logoImg)
-
+        Glide.with(mContext)
+                .load(R.drawable.ic_launcher_background)
+                .into(logoImg)
         return row
     }
 }
